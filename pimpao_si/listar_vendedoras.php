@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -26,7 +25,7 @@
 <meta name="theme-color" content="#ffffff">
 
 
-<title>Produtos - SI Pimpão</title>
+<title>Vendedoras - SI Pimpão</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -54,48 +53,48 @@
 <!-- BEGIN BODY -->
 <body class="">
 <!-- BEGIN HEADER -->
-<div class="header navbar navbar-inverse "> 
+<div class="header navbar navbar-inverse ">
   <!-- BEGIN TOP NAVIGATION BAR -->
   <div class="navbar-inner">
-  <div class="header-seperation"> 
-    <ul class="nav pull-left notifcation-center visible-xs visible-sm"> 
-     <li class="dropdown"> 
-      <a href="#main-menu" data-webarch="toggle-left-side"> 
-        <div class="iconset top-menu-toggle-white"></div> 
-      </a> 
-     </li>     
+  <div class="header-seperation">
+    <ul class="nav pull-left notifcation-center visible-xs visible-sm">
+     <li class="dropdown">
+      <a href="#main-menu" data-webarch="toggle-left-side">
+        <div class="iconset top-menu-toggle-white"></div>
+      </a>
+     </li>
     </ul>
-      <!-- BEGIN LOGO --> 
-      
+      <!-- BEGIN LOGO -->
+
       <div class="container">
         <div id="element">
-          <a href="../../pimpao_si/templates/base.html">
+          <a href="../../pimpao_si/base.php">
             <img src="../../static/custom/logo.png" class="logo" alt=""  width="250" height="60" align="middle" style="margin: 0px 10px 0px -15px"/>
           </a>
         </div>
       </div>
 
-      <!-- END LOGO --> 
-      <ul class="nav pull-right notifcation-center">  
-        <li class="dropdown hidden-xs hidden-sm"> 
-     <!--     <a href="index.html" class="dropdown-toggle active" data-toggle=""> 
+      <!-- END LOGO -->
+      <ul class="nav pull-right notifcation-center">
+        <li class="dropdown hidden-xs hidden-sm">
+     <!--     <a href="index.php" class="dropdown-toggle active" data-toggle="">
             <div class="iconset top-home"></div>
           </a> -->
         </li>
-        <li class="dropdown hidden-xs hidden-sm"> 
-<!--          <a href="email.html" class="dropdown-toggle" > 
-            <div class="iconset top-messages"></div><span class="badge">2</span> 
+        <li class="dropdown hidden-xs hidden-sm">
+<!--          <a href="email.html" class="dropdown-toggle" >
+            <div class="iconset top-messages"></div><span class="badge">2</span>
           </a> -->
         </li>
-    <li class="dropdown visible-xs visible-sm"> 
+    <li class="dropdown visible-xs visible-sm">
       <a href="#" data-webarch="toggle-right-side">
         <div class="iconset top-chat-white "></div>
-      </a> 
-    </li>        
+      </a>
+    </li>
       </ul>
       </div>
-      <!-- END RESPONSIVE MENU TOGGLER --> 
-      <div class="header-quick-nav" > 
+      <!-- END RESPONSIVE MENU TOGGLER -->
+      <div class="header-quick-nav" >
       <!-- BEGIN TOP NAVIGATION MENU -->
     <div class="pull-left">
         <ul class="nav quick-section">
@@ -119,28 +118,28 @@
     </div>
    <!-- END TOP NAVIGATION MENU -->
    <!-- BEGIN CHAT TOGGLER -->
-    <div class="pull-right"> 
+    <div class="pull-right">
      <ul class="nav quick-section">
-      <li class="quicklinks"> 
+      <li class="quicklinks">
         <a data-toggle="dropdown" class="dropdown-toggle  pull-right " href="#" id="user-options">
-          <div class="iconset top-settings-dark "></div>  
+          <div class="iconset top-settings-dark "></div>
         </a>
-        <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">            
+        <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
           <li>
             <li class="start "> <a href="/perfil/{{user.pk}}"> <i class="fa fa-user" style="color: white"></i><span class="title">&nbsp;&nbsp;Meu Perfil</span></a>
             <a href="/logout/"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
           </li>
        </ul>
-      </li> 
+      </li>
     </ul>
       </div>
      <!-- END CHAT TOGGLER -->
       </div>
-      </div> 
-      <!-- END TOP NAVIGATION MENU --> 
-   
+      </div>
+      <!-- END TOP NAVIGATION MENU -->
+
   </div>
-  <!-- END TOP NAVIGATION BAR --> 
+  <!-- END TOP NAVIGATION BAR -->
 </div>
 <!-- END HEADER -->
 <!-- BEGIN CONTAINER -->
@@ -165,20 +164,20 @@
       <br>
       <ul>
 <!-- COMEÇO DE Menu Lateral -->
-        <li class="start "> <a href="../../pimpao_si/templates/listar_produtos.html"> <i class="fa fa-dropbox" style="color: white"></i><span class="title">Produtos em estoque</span> </a>
+        <li class="start "> <a href="../../pimpao_si/listar_produtos.php"> <i class="fa fa-dropbox" style="color: white"></i><span class="title">Produtos em estoque</span> </a>
 
-        <li class="start "> <a href="../../pimpao_si/templates/listar_vendas_dia.html"> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do dia</span> </a>
+        <li class="start "> <a href="../../pimpao_si/listar_vendas_dia.php"> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do dia</span> </a>
 
         <li class="start "> <a> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do mês</span> </a>
           <ul class="sub-menu">
-              <li> <a href="../../pimpao_si/templates/listar_gerente.html"> Ana </a> </li>
-              <li> <a href="../../pimpao_si/templates/listar_diretor.html"> Joana </a></li>
-              <li> <a href="../../pimpao_si/templates/listar_membro.html"> Mariana </a> </li> 
-              <li> <a href="../../pimpao_si/templates/listar_membro.html"> Jaff </a> </li> 
-           </ul> 
+              <li> <a href="../../pimpao_si/listar_gerente.php"> Ana </a> </li>
+              <li> <a href="../../pimpao_si/listar_diretor.php"> Joana </a></li>
+              <li> <a href="../../pimpao_si/listar_membro.php"> Mariana </a> </li>
+              <li> <a href="../../pimpao_si/listar_membro.php"> Jaff </a> </li>
+           </ul>
 
         </li>
-        <li class="start "> <a href="../../pimpao_si/templates/listar_vendedoras.html"> <i class="fa fa-users" style="color: white"></i><span class="title">Vendedoras</span> </a>
+        <li class="start "> <a href="../../pimpao_si/listar_vendedoras.php"> <i class="fa fa-users" style="color: white"></i><span class="title">Vendedoras</span> </a>
 <!-- {# FIM DE Menu Lateral#} -->
       </ul>
       <!-- END SIDEBAR MENU -->
@@ -191,9 +190,9 @@
     </div>
     <div class="pull-right">
       <div class="details-status"> <span class="animate-number" data-value="86" data-animation-duration="560">86</span>% </div>
-      <a href="lockscreen.html"><i class="fa fa-power-off"></i></a></div>
+      <a href="lockscreen.php"><i class="fa fa-power-off"></i></a></div>
   </div> -->
-  <!-- END SIDEBAR --> 
+  <!-- END SIDEBAR -->
   <!-- BEGIN PAGE CONTAINER-->
 <!--   <div class="page-content"> </div>
  -->    <!-- <div id="portlet-config" class="modal hide">
@@ -208,30 +207,30 @@
  -->    <!--   <div class="page-title"> <i class="icon-custom-left"></i>
       </div>
   </div> -->
-    <div class="content"> 
-    <div class="page-title">  
-      <h3>Home</h3>   
+    <div class="content">
+    <div class="page-title">
+      <h3>Home</h3>
     </div>
     </div>
 <!-- END CONTAINER -->
 
 
 
-<script src="../../static/demo/HTML/assets/plugins/pace/pace.min.js" type="text/javascript"></script>  
-<!-- BEGIN JS DEPENDECENCIES--> 
-<script src="../../static/demo/HTML/assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script> 
-<script src="../../static/demo/HTML/assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script> 
-<script src="../../static/demo/HTML/assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script> 
-<script src="../../static/demo/HTML/assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script> 
+<script src="../../static/demo/HTML/assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<!-- BEGIN JS DEPENDECENCIES-->
+<script src="../../static/demo/HTML/assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="../../static/demo/HTML/assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../static/demo/HTML/assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
+<script src="../../static/demo/HTML/assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
 <script src="../../static/demo/HTML/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../static/demo/HTML/assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../static/demo/HTML/assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../static/demo/HTML/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<!-- END CORE JS DEPENDECENCIES--> 
-<!-- BEGIN CORE TEMPLATE JS --> 
-<script src="../../static/demo/HTML/webarch/js/webarch.js" type="text/javascript"></script> 
-<script src="../../static/demo/HTML/assets/js/chat.js" type="text/javascript"></script> 
-<!-- END CORE TEMPLATE JS --> 
+<!-- END CORE JS DEPENDECENCIES-->
+<!-- BEGIN CORE TEMPLATE JS -->
+<script src="../../static/demo/HTML/webarch/js/webarch.js" type="text/javascript"></script>
+<script src="../../static/demo/HTML/assets/js/chat.js" type="text/javascript"></script>
+<!-- END CORE TEMPLATE JS -->
 
 </script>
 
@@ -262,25 +261,31 @@
         <div class="span12">
           <div class="grid simple ">
             <div class="grid-title">
-              <h3> Lista de Produtos em Estoque<span class="semi-bold"></span> </h3>
+              <h3> Lista de Vendedoras<span class="semi-bold"></span> </h3>
               <div class="tools"></div>
             </div>
             <div class="grid-body ">
-              <button type="button" class="btn btn-primary btn-cons" href="/cadastrar_gerente_qualidade/" style='background-color: #fcc400'>Cadastrar Produto</button>
+              <button type="button" class="btn btn-primary btn-cons" href="../../pimpao_si/cadastrar_vendedora.php" style='background-color: #ff5a58'>Cadastrar Vendedora</button>
               <table class="table" id="example2" >
                <thead>
                  <tr>
-                   <th>Produto</th>
-                   <th>Código</th>
-                   <th>Preço</th>
+                   <th>Nome</th>
+                   <th>Telefone</th>
+                   <th>E-mail</th>
                  </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                   <td>Camiseta</td>
-                   <td>00000000001</td>
-                   <td>R$ 538,50</td>
-                  </tr>
+                    <?php
+                        include "classes.php";
+                        // echo "$Vendedora1->nome";
+                        foreach (Vendedora::$instances as $obj) {
+                            echo "<tr>";
+                            echo "<td>$obj->nome</td>";
+                            echo "<td>$obj->telefone</td>";
+                            echo "<td>$obj->email</td>";
+                            echo "</tr>";
+                        }
+                    ?>
                 </tbody>
               </table>
             </div>
