@@ -170,15 +170,10 @@
 
         <li class="start "> <a> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do mês</span> </a>
           <ul class="sub-menu">
-              <?php
-                  include "classes.php";
-                  // echo "$Vendedora1->nome";
-                  foreach (Vendedora::$instances as $obj) {
-                      echo "<li>";
-                      echo "<a href='listar_vendas.php?vendedora=$obj->nome'>$obj->nome</a>";
-                      echo "</li>";
-                  }
-              ?>
+              <li> <a href="../../pimpao_si/listar_gerente.php"> Ana </a> </li>
+              <li> <a href="../../pimpao_si/listar_diretor.php"> Joana </a></li>
+              <li> <a href="../../pimpao_si/listar_membro.php"> Mariana </a> </li>
+              <li> <a href="../../pimpao_si/listar_membro.php"> Jaff </a> </li>
            </ul>
 
         </li>
@@ -266,51 +261,16 @@
         <div class="span12">
           <div class="grid simple ">
             <div class="grid-title">
-              <h3> Lista de Vendedoras<span class="semi-bold"></span> </h3>
+              <h3> Cadastrar Produtos<span class="semi-bold"></span> </h3>
               <div class="tools"></div>
             </div>
             <div class="grid-body ">
-                <!-- BEGIN CONTENT -->
-                <?php
-                    $servidor="localhost";
-                    $username="root";
-                    $password="";
-                    $database="phpmyadmin";
-
-                    $valor=$_POST['valor'];
-                    $vendedora=$_POST['vendedora'];
-                    $data=$_POST['data'];
-                    $tipo=$_POST['tipo'];
-
-                    $db = mysqli_connect($servidor,$username,$password,$database);
-                    if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
-                    $query = "INSERT INTO venda VALUES ('','$valor','$vendedora','$data', '$tipo')";
-                    $result = mysqli_query($db,$query);
-                    if (!$result)
-                    { echo "Erro de gravação!<br>"; return; }
-                    else
-                    {
-                        echo "Cadastro realizado com sucesso! <br>";
-                        echo "Dados da venda:<br>";
-                        echo "Valor:";
-                        echo $_POST['valor'];
-                        echo "<br>Vendedora:";
-                        echo $_POST['vendedora'];
-                        echo "<br>Data:";
-                        echo $_POST['data'];
-                        echo "<br>Tipo:";
-                        echo $_POST['tipo'];
-                        echo "<br>O que deseja fazer agora?<br>";
-                        mysqli_close($db);
-                    }
-                ?>
-                <a href="cadastrar_vendas.php">
-                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Cadastrar outra Venda</button>
-                </a>
-                <a href="listar_vendas_dia.php" >
-                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Listar Vendas do Dia</button>
-                </a>
-                <!-- END CONTENT -->
+                <form name="form_produtos" action="sucesso_produtos.php" method="post">
+                    Nome: <input type="text" name="nome">
+                    Código: <input type="number" name="codigo">
+                    Preço: <input type="number" name="preco">
+                    <input type="submit" value="entra" />
+                </form>
             </div>
           </div>
         </div>

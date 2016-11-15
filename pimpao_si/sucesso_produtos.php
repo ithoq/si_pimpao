@@ -266,7 +266,7 @@
         <div class="span12">
           <div class="grid simple ">
             <div class="grid-title">
-              <h3> Lista de Vendedoras<span class="semi-bold"></span> </h3>
+              <h3> Produto cadastrado!<span class="semi-bold"></span> </h3>
               <div class="tools"></div>
             </div>
             <div class="grid-body ">
@@ -277,38 +277,35 @@
                     $password="";
                     $database="phpmyadmin";
 
-                    $valor=$_POST['valor'];
-                    $vendedora=$_POST['vendedora'];
-                    $data=$_POST['data'];
-                    $tipo=$_POST['tipo'];
+                    $valor=$_POST['nome'];
+                    $vendedora=$_POST['codigo'];
+                    $data=$_POST['preco'];
 
                     $db = mysqli_connect($servidor,$username,$password,$database);
                     if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
-                    $query = "INSERT INTO venda VALUES ('','$valor','$vendedora','$data', '$tipo')";
+                    $query = "INSERT INTO produto VALUES ('$nome','$codigo','$preco')";
                     $result = mysqli_query($db,$query);
                     if (!$result)
                     { echo "Erro de gravação!<br>"; return; }
                     else
                     {
                         echo "Cadastro realizado com sucesso! <br>";
-                        echo "Dados da venda:<br>";
-                        echo "Valor:";
-                        echo $_POST['valor'];
-                        echo "<br>Vendedora:";
-                        echo $_POST['vendedora'];
-                        echo "<br>Data:";
-                        echo $_POST['data'];
-                        echo "<br>Tipo:";
-                        echo $_POST['tipo'];
+                        echo "Dados do produto:<br>";
+                        echo "Nome:";
+                        echo $_POST['nome'];
+                        echo "<br>Código:";
+                        echo $_POST['codigo'];
+                        echo "<br>Preço:";
+                        echo $_POST['preco'];
                         echo "<br>O que deseja fazer agora?<br>";
                         mysqli_close($db);
                     }
                 ?>
-                <a href="cadastrar_vendas.php">
-                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Cadastrar outra Venda</button>
+                <a href="cadastrar_produtos.php">
+                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Cadastrar outra Produto</button>
                 </a>
-                <a href="listar_vendas_dia.php" >
-                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Listar Vendas do Dia</button>
+                <a href="listar_produtos.php" >
+                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Listar Produtos</button>
                 </a>
                 <!-- END CONTENT -->
             </div>
