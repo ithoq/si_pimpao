@@ -25,7 +25,7 @@
 <meta name="theme-color" content="#ffffff">
 
 
-<title>Vendas do Dia - SI Pimpão</title>
+<title>Vendedoras - SI Pimpão</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -68,7 +68,7 @@
 
       <div class="container">
         <div id="element">
-          <a href="../../pimpao_si/base.html">
+          <a href="../../pimpao_si/base.php">
             <img src="../../static/custom/logo.png" class="logo" alt=""  width="250" height="60" align="middle" style="margin: 0px 10px 0px -15px"/>
           </a>
         </div>
@@ -77,7 +77,7 @@
       <!-- END LOGO -->
       <ul class="nav pull-right notifcation-center">
         <li class="dropdown hidden-xs hidden-sm">
-     <!--     <a href="index.html" class="dropdown-toggle active" data-toggle="">
+     <!--     <a href="index.php" class="dropdown-toggle active" data-toggle="">
             <div class="iconset top-home"></div>
           </a> -->
         </li>
@@ -164,20 +164,20 @@
       <br>
       <ul>
 <!-- COMEÇO DE Menu Lateral -->
-        <li class="start "> <a href="../../pimpao_si/listar_produtos.html"> <i class="fa fa-dropbox" style="color: white"></i><span class="title">Produtos em estoque</span> </a>
+        <li class="start "> <a href="../../pimpao_si/listar_produtos.php"> <i class="fa fa-dropbox" style="color: white"></i><span class="title">Produtos em estoque</span> </a>
 
-        <li class="start "> <a href="../../pimpao_si/listar_vendas_dia.html"> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do dia</span> </a>
+        <li class="start "> <a href="../../pimpao_si/listar_vendas_dia.php"> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do dia</span> </a>
 
         <li class="start "> <a> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do mês</span> </a>
           <ul class="sub-menu">
-              <li> <a href="../../pimpao_si/listar_gerente.html"> Ana </a> </li>
-              <li> <a href="../../pimpao_si/listar_diretor.html"> Joana </a></li>
-              <li> <a href="../../pimpao_si/listar_membro.html"> Mariana </a> </li>
-              <li> <a href="../../pimpao_si/listar_membro.html"> Jaff </a> </li>
+              <li> <a href="../../pimpao_si/listar_gerente.php"> Ana </a> </li>
+              <li> <a href="../../pimpao_si/listar_diretor.php"> Joana </a></li>
+              <li> <a href="../../pimpao_si/listar_membro.php"> Mariana </a> </li>
+              <li> <a href="../../pimpao_si/listar_membro.php"> Jaff </a> </li>
            </ul>
 
         </li>
-        <li class="start "> <a href="../../pimpao_si/listar_vendedoras.html"> <i class="fa fa-users" style="color: white"></i><span class="title">Vendedoras</span> </a>
+        <li class="start "> <a href="../../pimpao_si/listar_vendedoras.php"> <i class="fa fa-users" style="color: white"></i><span class="title">Vendedoras</span> </a>
 <!-- {# FIM DE Menu Lateral#} -->
       </ul>
       <!-- END SIDEBAR MENU -->
@@ -190,7 +190,7 @@
     </div>
     <div class="pull-right">
       <div class="details-status"> <span class="animate-number" data-value="86" data-animation-duration="560">86</span>% </div>
-      <a href="lockscreen.html"><i class="fa fa-power-off"></i></a></div>
+      <a href="lockscreen.php"><i class="fa fa-power-off"></i></a></div>
   </div> -->
   <!-- END SIDEBAR -->
   <!-- BEGIN PAGE CONTAINER-->
@@ -261,36 +261,17 @@
         <div class="span12">
           <div class="grid simple ">
             <div class="grid-title">
-              <h3> Lista de Vendas do Dia<span class="semi-bold"></span> </h3>
+              <h3> Cadastrar Vendas<span class="semi-bold"></span> </h3>
               <div class="tools"></div>
             </div>
             <div class="grid-body ">
-                <a href="cadastrar_vendas.php">
-                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #01eeea'>Cadastrar Venda</button>
-                </a>
-              <table class="table" id="example2" >
-               <thead>
-                 <tr>
-                   <th>Nome</th>
-                   <th>Valor</th>
-                   <th>Forma de Pagamento</th>
-                 </tr>
-                </thead>
-                <tbody>
-                    <?php
-                        include "classes.php";
-                        // echo "$Vendedora1->nome";
-                        foreach (Venda::$instances as $obj) {
-                            echo "<tr>";
-                            $temp = $obj->vendedora->nome;
-                            echo "<td>$temp</td>";
-                            echo "<td>$obj->valor</td>";
-                            echo "<td>$obj->tipo</td>";
-                            echo "</tr>";
-                        }
-                    ?>
-                </tbody>
-              </table>
+                <form name="form_vendedora" action="sucesso_vendas.php" method="post">
+                    Valor: <input type="number" name="valor">
+                    Vendedora: <input type="text" name="vendedora">
+                    Data: <input type="date" name="data">
+                    Tipo de venda: <input type="text" name="tipo">
+                    <input type="submit" value="entra" />
+                </form>
             </div>
           </div>
         </div>

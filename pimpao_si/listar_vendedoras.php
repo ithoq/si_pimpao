@@ -265,7 +265,9 @@
               <div class="tools"></div>
             </div>
             <div class="grid-body ">
-              <button type="button" class="btn btn-primary btn-cons" href="../../pimpao_si/cadastrar_vendedora.php" style='background-color: #ff5a58'>Cadastrar Vendedora</button>
+                <a href="cadastrar_vendedoras.php">
+                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Cadastrar Vendedora</button>
+                </a>
               <table class="table" id="example2" >
                <thead>
                  <tr>
