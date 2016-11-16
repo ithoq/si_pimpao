@@ -285,7 +285,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
             </div>
             <div class="grid-body ">
                 <form name="form_vendedora" action="sucesso_vendas.php" method="post">
-                    Valor: <input type="number" name="valor">
+                    Valor: <input type="number" step="0.01" name="valor">
                     Vendedora: <input type="text" name="vendedora">
                     Data: <input type="date" name="data" value="<?php echo date('Y-m-d'); ?>" />
                     Tipo de venda: <input type="text" name="tipo">
