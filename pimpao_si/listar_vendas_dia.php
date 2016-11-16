@@ -261,7 +261,7 @@
         <div class="span12">
           <div class="grid simple ">
             <div class="grid-title">
-              <h3> Lista de Vendas do Dia<span class="semi-bold"></span> </h3>
+              <h3>Lista de Vendas do Dia: <strong><?php echo date('d-m-Y'); ?></strong><span class="semi-bold"></span> </h3>
               <div class="tools"></div>
             </div>
             <div class="grid-body ">
@@ -271,23 +271,39 @@
               <table class="table" id="example2" >
                <thead>
                  <tr>
-                   <th>Nome</th>
+                   <th>Vendedora</th>
                    <th>Valor</th>
                    <th>Forma de Pagamento</th>
                  </tr>
                 </thead>
                 <tbody>
                     <?php
-                        include "classes.php";
-                        // echo "$Vendedora1->nome";
-                        foreach (Venda::$instances as $obj) {
-                            echo "<tr>";
-                            $temp = $obj->vendedora->nome;
-                            echo "<td>$temp</td>";
-                            echo "<td>$obj->valor</td>";
-                            echo "<td>$obj->tipo</td>";
-                            echo "</tr>";
-                        }
+                    // include "classes.php";
+
+                    $servidor="localhost";
+                    $username="root";
+                    $password="";
+                    $database="si_pimpao";
+
+                    $db = mysqli_connect($servidor,$username,$password,$database);
+                    if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
+
+                    $seleciona = "SELECT * FROM venda WHERE data = CURDATE()";
+                    $query=mysqli_query($db,$seleciona);
+                    $i=0;
+                    while($row = mysqli_fetch_array($query)){
+                        echo "<tr>";
+                        echo "<td>";
+                        echo $row[2];
+                        echo "</td>";
+                        echo "<td>";
+                        echo $row[1];
+                        echo "</td>";
+                        echo "<td>";
+                        echo $row[4];
+                        echo "</td>";
+                        echo "</tr>";
+                    }
                     ?>
                 </tbody>
               </table>

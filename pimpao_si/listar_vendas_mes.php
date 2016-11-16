@@ -261,31 +261,50 @@
         <div class="span12">
           <div class="grid simple ">
             <div class="grid-title">
-              <h3> Lista de Vendas por vendedora<span class="semi-bold"></span> </h3>
+              <h3> Lista de Vendas do mês da vendedora <strong>
+                <?php if (!empty($_GET['vendedora'])){
+                    echo $_GET['vendedora'];}
+                ?> </strong>
+                <span class="semi-bold"></span> </h3>
               <div class="tools"></div>
             </div>
             <div class="grid-body ">
-                <a href="cadastrar_vendedoras.php">
-                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Cadastrar Vendedora</button>
+                <a href="cadastrar_vendas.php">
+                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Cadastrar Venda</button>
                 </a>
               <table class="table" id="example2" >
                <thead>
                  <tr>
                    <th>Data</th>
-                   <th>Valor total vendido</th>
+                   <th>Valor</th>
                  </tr>
                 </thead>
                 <tbody>
-                    <?php
-                        include "classes.php";
-                        echo $_GET['vendedora'];
+                <?php
+                    $servidor="localhost";
+                    $username="root";
+                    $password="";
+                    $database="si_pimpao";
 
-                        foreach (Vendedora::$instances as $obj) {
-                            echo "<tr>";
-                            echo "<td>$obj->nome</td>";
-                            echo "<td>$obj->telefone</td>";
-                            echo "</tr>";
-                        }
+                    $db = mysqli_connect($servidor,$username,$password,$database);
+                    if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
+
+                    if (!empty($_GET['vendedora'])){
+                        $temp = $_GET['vendedora'];
+                    }
+                    $seleciona = "SELECT * FROM venda WHERE year(data) = year(curdate()) and month(data) = month(curdate()) and vendedora = '$temp' ORDER BY data ASC";
+                    $query=mysqli_query($db,$seleciona);
+                    $i=0;
+                    while($row = mysqli_fetch_array($query)){
+                        echo "<tr>";
+                        echo "<td>";
+                        echo $row[3];
+                        echo "</td>";
+                        echo "<td>";
+                        echo $row[1];
+                        echo "</td>";
+                        echo "</tr>";
+                    }
                     ?>
                 </tbody>
               </table>

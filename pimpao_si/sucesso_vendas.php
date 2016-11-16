@@ -275,7 +275,7 @@
                     $servidor="localhost";
                     $username="root";
                     $password="";
-                    $database="phpmyadmin";
+                    $database="si_pimpao";
 
                     $valor=$_POST['valor'];
                     $vendedora=$_POST['vendedora'];

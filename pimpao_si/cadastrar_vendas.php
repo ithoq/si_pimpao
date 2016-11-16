@@ -268,7 +268,7 @@
                 <form name="form_vendedora" action="sucesso_vendas.php" method="post">
                     Valor: <input type="number" name="valor">
                     Vendedora: <input type="text" name="vendedora">
-                    Data: <input type="date" name="data">
+                    Data: <input type="date" name="data" value="<?php echo date('Y-m-d'); ?>" />
                     Tipo de venda: <input type="text" name="tipo">
                     <input type="submit" value="entra" />
                 </form>

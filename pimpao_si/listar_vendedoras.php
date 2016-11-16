@@ -279,14 +279,38 @@
                 <tbody>
                     <?php
                         include "classes.php";
-                        // echo "$Vendedora1->nome";
-                        foreach (Vendedora::$instances as $obj) {
+
+                        $servidor="localhost";
+                        $username="root";
+                        $password="";
+                        $database="si_pimpao";
+
+                        $db = mysqli_connect($servidor,$username,$password,$database);
+                        if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
+
+                        $seleciona = "SELECT * FROM vendedora ";
+                        $query=mysqli_query($db,$seleciona);
+                        $i=0;
+                        while($row = mysqli_fetch_array($query)){
                             echo "<tr>";
-                            echo "<td>$obj->nome</td>";
-                            echo "<td>$obj->telefone</td>";
-                            echo "<td>$obj->email</td>";
+                            echo "<td>";
+                            echo $row[1];
+                            echo "</td>";
+                            echo "<td>";
+                            echo $row[2];
+                            echo "</td>";
+                            echo "<td>";
+                            echo $row[3];
+                            echo "</td>";
                             echo "</tr>";
                         }
+                        // foreach (Vendedora::$instances as $obj) {
+                        //     echo "<tr>";
+                        //     echo "<td>$obj->nome</td>";
+                        //     echo "<td>$obj->telefone</td>";
+                        //     echo "<td>$obj->email</td>";
+                        //     echo "</tr>";
+                        // }
                     ?>
                 </tbody>
               </table>

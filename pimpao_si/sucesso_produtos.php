@@ -275,15 +275,15 @@
                     $servidor="localhost";
                     $username="root";
                     $password="";
-                    $database="phpmyadmin";
+                    $database="si_pimpao";
 
-                    $valor=$_POST['nome'];
-                    $vendedora=$_POST['codigo'];
-                    $data=$_POST['preco'];
+                    $nome=$_POST['nome'];
+                    $codigo=$_POST['codigo'];
+                    $preco=$_POST['preco'];
 
                     $db = mysqli_connect($servidor,$username,$password,$database);
                     if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
-                    $query = "INSERT INTO produto VALUES ('$nome','$codigo','$preco')";
+                    $query = "INSERT INTO produto VALUES ('','$nome','$codigo','$preco')";
                     $result = mysqli_query($db,$query);
                     if (!$result)
                     { echo "Erro de gravação!<br>"; return; }
@@ -302,7 +302,7 @@
                     }
                 ?>
                 <a href="cadastrar_produtos.php">
-                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Cadastrar outra Produto</button>
+                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Cadastrar outro Produto</button>
                 </a>
                 <a href="listar_produtos.php" >
                     <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Listar Produtos</button>

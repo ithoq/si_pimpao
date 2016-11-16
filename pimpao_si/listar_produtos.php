@@ -266,7 +266,9 @@
               <div class="tools"></div>
             </div>
             <div class="grid-body ">
-              <button type="button" class="btn btn-primary btn-cons" href="/cadastrar_gerente_qualidade/" style='background-color: #fcc400'>Cadastrar Produto</button>
+            <a href="cadastrar_produtos.php" >
+              <button type="button" class="btn btn-primary btn-cons" style='background-color: #fcc400'>Cadastrar Produto</button>
+            </a>
               <table class="table" id="example2" >
                 <thead>
                     <tr>
@@ -277,15 +279,30 @@
                 </thead>
                 <tbody>
                     <?php
-                        include "classes.php";
-                        // echo "$Vendedora1->nome";
-                        foreach (Produto::$instances as $obj) {
-                            echo "<tr>";
-                            echo "<td>$obj->nome</td>";
-                            echo "<td>$obj->codigo</td>";
-                            echo "<td>$obj->preco</td>";
-                            echo "</tr>";
-                        }
+                    $servidor="localhost";
+                    $username="root";
+                    $password="";
+                    $database="si_pimpao";
+
+                    $db = mysqli_connect($servidor,$username,$password,$database);
+                    if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
+
+                    $seleciona = "SELECT * FROM produto ";
+                    $query=mysqli_query($db,$seleciona);
+                    $i=0;
+                    while($row = mysqli_fetch_array($query)){
+                        echo "<tr>";
+                        echo "<td>";
+                        echo $row[1];
+                        echo "</td>";
+                        echo "<td>";
+                        echo $row[2];
+                        echo "</td>";
+                        echo "<td>";
+                        echo $row[3];
+                        echo "</td>";
+                        echo "</tr>";
+                    }
                     ?>
                 </tbody>
               </table>

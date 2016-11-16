@@ -266,22 +266,36 @@
             </div>
             <div class="grid-body ">
                 <!-- BEGIN CONTENT -->
-                <?php
-                    if (!empty($_POST)) {
-                        echo "Cadastro realizado com sucesso! <br>";
-                        echo "Dados da vendedora:<br>";
-                        echo "Nome:";
-                        echo $_POST['nome'];
-                        echo "<br>Telefone:";
-                        echo $_POST['telefone'];
-                        echo "<br>Email:";
-                        echo $_POST['email'];
-                        echo "<br>O que deseja fazer agora?<br>";
-                    }
-                    else {
-                        echo "Nenhuma vendedora foi cadastrada. O que deseja fazer?<br>";
-                    }
-                ?>
+            <?php
+                $servidor="localhost";
+                $username="root";
+                $password="";
+                $database="si_pimpao";
+
+                $nome=$_POST['nome'];
+                $telefone=$_POST['telefone'];
+                $email=$_POST['email'];
+
+                $db = mysqli_connect($servidor,$username,$password,$database);
+                if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
+                $query = "INSERT INTO vendedora VALUES ('','$nome','$telefone','$email')";
+                $result = mysqli_query($db,$query);
+                if (!$result)
+                { echo "Erro de gravação!<br>"; return; }
+                else
+                {
+                    echo "Cadastro realizado com sucesso! <br>";
+                    echo "Dados da vendedora:<br>";
+                    echo "Nome:";
+                    echo $_POST['nome'];
+                    echo "<br>Telefone:";
+                    echo $_POST['telefone'];
+                    echo "<br>Email:";
+                    echo $_POST['email'];
+                    echo "<br>O que deseja fazer agora?<br>";
+                    mysqli_close($db);
+                }
+            ?>
                 <a href="cadastrar_vendedoras.php">
                     <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Cadastrar outra Vendedora</button>
                 </a>
