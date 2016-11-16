@@ -127,6 +127,6 @@ global $_SG;
    unset($_SESSION['usuarioID'], $_SESSION['usuarioNome'], $_SESSION['usuarioLogin'], $_SESSION['usuarioSenha']);
 
    // Manda pra tela de login
-   header("Location: ".$_SG['paginaLogin']."");
+   header("Location:login.php");
  }
 ?>

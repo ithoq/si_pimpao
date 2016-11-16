@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: 'si_pimpao'
+-- Database: `si_pimpao`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table 'login'
+-- Table structure for table `login`
 --
 
 CREATE TABLE `login` (
@@ -34,7 +34,7 @@ CREATE TABLE `login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table 'login'
+-- Dumping data for table `login`
 --
 
 INSERT INTO `login` (`idlogin`, `login`, `senha`, `nome`) VALUES
@@ -45,7 +45,7 @@ INSERT INTO `login` (`idlogin`, `login`, `senha`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pma__bookmark'
+-- Table structure for table `pma__bookmark`
 --
 -- in use(#1932 - Table 'si_pimpao.pma__bookmark' doesn't exist in engine)
 -- Error reading data: (#1932 - Table 'si_pimpao.pma__bookmark' doesn't exist in engine)
@@ -53,7 +53,7 @@ INSERT INTO `login` (`idlogin`, `login`, `senha`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table 'pma__central_columns'
+-- Table structure for table `pma__central_columns`
 --
 -- in use(#1932 - Table 'si_pimpao.pma__central_columns' doesn't exist in engine)
 -- Error reading data: (#1932 - Table 'si_pimpao.pma__central_columns' doesn't exist in engine)
@@ -61,7 +61,7 @@ INSERT INTO `login` (`idlogin`, `login`, `senha`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table 'pma__column_info'
+-- Table structure for table `pma__column_info`
 --
 -- in use(#1932 - Table 'si_pimpao.pma__column_info' doesn't exist in engine)
 -- Error reading data: (#1932 - Table 'si_pimpao.pma__column_info' doesn't exist in engine)
@@ -69,7 +69,7 @@ INSERT INTO `login` (`idlogin`, `login`, `senha`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table 'pma__designer_settings'
+-- Table structure for table `pma__designer_settings`
 --
 -- in use(#1932 - Table 'si_pimpao.pma__designer_settings' doesn't exist in engine)
 -- Error reading data: (#1932 - Table 'si_pimpao.pma__designer_settings' doesn't exist in engine)
@@ -77,7 +77,7 @@ INSERT INTO `login` (`idlogin`, `login`, `senha`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table 'produto'
+-- Table structure for table `produto`
 --
 
 CREATE TABLE `produto` (
@@ -97,7 +97,7 @@ INSERT INTO `produto` (`ID`, `nome`, `codigo`, `preco`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table 'proprietaria'
+-- Table structure for table `proprietaria`
 --
 
 CREATE TABLE `proprietaria` (
@@ -122,7 +122,7 @@ CREATE TABLE `venda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table 'venda'
+-- Dumping data for table `venda`
 --
 
 INSERT INTO `venda` (`ID`, `valor`, `vendedora`, `data`, `tipo`) VALUES
@@ -137,7 +137,7 @@ INSERT INTO `venda` (`ID`, `valor`, `vendedora`, `data`, `tipo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table 'vendedora'
+-- Table structure for table `vendedora`
 --
 
 CREATE TABLE `vendedora` (
@@ -160,7 +160,7 @@ INSERT INTO `vendedora` (`ID`, `nome`, `telefone`, `email`) VALUES
 --
 
 --
--- Indexes for table 'login'
+-- Indexes for table `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`idlogin`);

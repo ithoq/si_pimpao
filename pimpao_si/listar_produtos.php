@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 require_once("seguranca.php");
 if ($_SESSION['userAuthenticated']===NULL) {
@@ -128,12 +127,12 @@ if ($_SESSION['userAuthenticated']===NULL) {
      <ul class="nav quick-section">
       <li class="quicklinks">
         <a data-toggle="dropdown" class="dropdown-toggle  pull-right " href="#" id="user-options">
-          <div class="iconset top-settings-dark "></div>
+          <div class="fa fa-power-off"></div>
         </a>
         <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
           <li>
-            <li class="start "> <a href="/perfil/{{user.pk}}"> <i class="fa fa-user" style="color: white"></i><span class="title">&nbsp;&nbsp;Meu Perfil</span></a>
-            <a href="/pimpao_si/logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
+            <li class="start ">
+            <a href="../pimpao_si/logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
           </li>
        </ul>
       </li>
