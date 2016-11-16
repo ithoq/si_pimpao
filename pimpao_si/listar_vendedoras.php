@@ -294,6 +294,8 @@ if ($_SESSION['userAuthenticated']===NULL) {
                    <th>Nome</th>
                    <th>Telefone</th>
                    <th>E-mail</th>
+                   <th>Editar</th>
+                   <th>Deletar</th>
                  </tr>
                 </thead>
                 <tbody>
@@ -321,6 +323,16 @@ if ($_SESSION['userAuthenticated']===NULL) {
                             echo "</td>";
                             echo "<td>";
                             echo $row[3];
+                            echo "</td>";
+                            echo "<td>";
+                            echo "<a href='cadastrar_produtos.php'>";
+                            echo "<button class='btn btn-primary btn-xs btn-mini' style = 'background-color: #FFA506'><i class='fa fa-edit'></i></button>";
+                            echo "</a>";
+                            echo "</td>";
+                            echo "<td>";
+                            echo "<a href='cadastrar_produtos.php'>";
+                            echo "<button class='btn btn-primary btn-xs btn-mini' style = 'background-color: #FF0707'><i class='fa fa-times'></i></button>";
+                            echo "</a>";
                             echo "</td>";
                             echo "</tr>";
                         }
