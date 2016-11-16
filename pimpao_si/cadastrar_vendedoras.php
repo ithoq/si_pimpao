@@ -280,15 +280,15 @@ if ($_SESSION['userAuthenticated']===NULL) {
         <div class="span12">
           <div class="grid simple ">
             <div class="grid-title">
-              <h3> Lista de Vendedoras<span class="semi-bold"></span> </h3>
+              <h3> Cadastro de Vendedoras<span class="semi-bold"></span> </h3>
               <div class="tools"></div>
             </div>
             <div class="grid-body ">
                 <form name="form_vendedora" action="sucesso_vendedoras.php" method="post">
-                    Nome: <input type="text" name="nome">
-                    Telefone: <input type="text" name="telefone">
-                    Email: <input type="email" name="email">
-                    <input type="submit" value="entra" />
+                    Nome: <br><input type="text" name="nome"><br><br>
+                    Telefone: <br><input type="text" name="telefone"><br><br>
+                    Email: <br><input type="email" name="email"><br><br>
+                    <input type="submit" value="Cadastrar" />
                 </form>
             </div>
           </div>

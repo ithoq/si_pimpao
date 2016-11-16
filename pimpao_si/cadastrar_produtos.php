@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 require_once("seguranca.php");
 if ($_SESSION['userAuthenticated']===NULL) {
@@ -287,9 +286,9 @@ if ($_SESSION['userAuthenticated']===NULL) {
             </div>
             <div class="grid-body ">
                 <form name="form_produtos" action="sucesso_produtos.php" method="post">
-                    Nome: <input type="text" name="nome">
-                    Código: <input type="number" name="codigo">
-                    Preço: <input type="number" name="preco">
+                    Nome: <br><input type="text" name="nome"><br><br>
+                    Código: <br><input type="number" name="codigo"><br><br>
+                    Preço: <br><input type="number" name="preco"><br><br>
                     <input type="submit" value="Cadastrar" />
                 </form>
             </div>
