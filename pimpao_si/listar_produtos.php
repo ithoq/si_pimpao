@@ -127,7 +127,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
      <ul class="nav quick-section">
       <li class="quicklinks">
         <a data-toggle="dropdown" class="dropdown-toggle  pull-right " href="#" id="user-options">
-          <div class="fa fa-power-off"></div>
+          <div class="iconset top-settings-dark"></div>
         </a>
         <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
           <li>
