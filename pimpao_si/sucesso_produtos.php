@@ -302,7 +302,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
                     if (!$result)
                     { echo "Erro de gravação!<br>"; return; }
                     else
-                    {
+/*                    {
                         echo "Cadastro realizado com sucesso! <br>";
                         echo "Dados do produto:<br>";
                         echo "Nome:";
@@ -313,8 +313,36 @@ if ($_SESSION['userAuthenticated']===NULL) {
                         echo $_POST['preco'];
                         echo "<br>O que deseja fazer agora?<br>";
                         mysqli_close($db);
-                    }
+                    }*/
                 ?>
+            <div class="row">
+        <div class="col-md-6">
+          <div class="grid simple">
+            <div class="grid-title no-border">
+              <h2>Cadastro realizado com sucesso!</h2>
+            <div class="grid-body no-border">
+              <div class="row-fluid">
+                <div class="scroller scrollbar-dynamic" data-height="220px">
+                  <h3>
+                  <p>
+                    <?php
+                      echo "<span class='semi-bold'>Dados do produto:</span><br>";
+                      echo "<p>Nome: ";
+                      echo $_POST['nome'];
+                      echo "<br>Código: ";
+                      echo $_POST['codigo'];
+                      echo "<br>Preço: ";
+                      echo $_POST['preco'];
+                      echo "<br><br>O que deseja fazer agora?</p><br>";
+                      mysqli_close($db);
+                    ?>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
                 <a href="cadastrar_produtos.php">
                     <button type="button" class="btn btn-primary btn-cons" style='background-color: #fcc400'>Cadastrar outro Produto</button>
                 </a>
@@ -327,13 +355,6 @@ if ($_SESSION['userAuthenticated']===NULL) {
         </div>
       </div>
   </div>
-<!-- Footer -->
-<footer id="page-footer" class="content-mini">
-    <div class="pull-right">
-        Developed by t2g5</a>
-    </div>
-</footer>
-<!-- END Footer -->
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="../static/demo/HTML/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
