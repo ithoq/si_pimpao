@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 16, 2016 at 03:19 
+-- Generation Time: Nov 16, 2016 at 02:53 
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -109,8 +109,7 @@ INSERT INTO `venda` (`ID`, `valor`, `vendedora`, `data`, `tipo`) VALUES
 (3, 41234, 'das', '2016-11-15', 'asda'),
 (4, 878797, 'bajsgdj', '2016-11-16', 'hdaksh'),
 (5, 696927, 'das', '2016-11-19', 'cheque'),
-(6, 712362000, 'das', '2016-11-01', 'dahs'),
-(7, 21212, 'Maria', '2016-11-16', 'cheque');
+(6, 712362000, 'das', '2016-11-01', 'dahs');
 
 -- --------------------------------------------------------
 
@@ -179,7 +178,7 @@ ALTER TABLE `proprietaria`
 -- AUTO_INCREMENT for table `venda`
 --
 ALTER TABLE `venda`
-  MODIFY `ID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `vendedora`
 --

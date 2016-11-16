@@ -165,20 +165,33 @@
       <br>
       <ul>
 <!-- COMEÇO DE Menu Lateral -->
-        <li class="start "> <a href="../pimpao_si/listar_produtos.html"> <i class="fa fa-dropbox" style="color: white"></i><span class="title">Produtos em estoque</span> </a>
+        <li class="start "> <a href="../pimpao_si/listar_produtos.php"> <i class="fa fa-dropbox" style="color: white"></i><span class="title">Produtos em estoque</span> </a>
 
-        <li class="start "> <a href="../pimpao_si/listar_vendas_dia.html"> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do dia</span> </a>
+        <li class="start "> <a href="../pimpao_si/listar_vendas_dia.php"> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do dia</span> </a>
 
         <li class="start "> <a> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do mês</span> </a>
           <ul class="sub-menu">
-              <li> <a href="../pimpao_si/listar_gerente.html"> Ana </a> </li>
-              <li> <a href="../pimpao_si/listar_diretor.html"> Joana </a></li>
-              <li> <a href="../pimpao_si/listar_membro.html"> Mariana </a> </li>
-              <li> <a href="../pimpao_si/listar_membro.html"> Jaff </a> </li>
-           </ul>
+              <?php
+              $servidor="localhost";
+              $username="root";
+              $password="";
+              $database="si_pimpao";
 
+              $db = mysqli_connect($servidor,$username,$password,$database);
+              if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
+
+              $seleciona = "SELECT * FROM vendedora ORDER BY nome ASC";
+              $query=mysqli_query($db,$seleciona);
+              $i=0;
+              while($row = mysqli_fetch_array($query)){
+                  echo "<li><a href='listar_vendas_mes.php?vendedora=$row[1]'>";
+                  echo $row[1];
+                  echo "</a></li>";
+              }
+              ?>
+           </ul>
         </li>
-        <li class="start "> <a href="../pimpao_si/listar_vendedoras.html"> <i class="fa fa-users" style="color: white"></i><span class="title">Vendedoras</span> </a>
+        <li class="start "> <a href="../pimpao_si/listar_vendedoras.php"> <i class="fa fa-users" style="color: white"></i><span class="title">Vendedoras</span> </a>
 <!-- {# FIM DE Menu Lateral#} -->
       </ul>
       <!-- END SIDEBAR MENU -->

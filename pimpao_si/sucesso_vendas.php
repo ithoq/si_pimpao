@@ -171,13 +171,22 @@
         <li class="start "> <a> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do mês</span> </a>
           <ul class="sub-menu">
               <?php
-                  include "classes.php";
-                  // echo "$Vendedora1->nome";
-                  foreach (Vendedora::$instances as $obj) {
-                      echo "<li>";
-                      echo "<a href='listar_vendas.php?vendedora=$obj->nome'>$obj->nome</a>";
-                      echo "</li>";
-                  }
+              $servidor="localhost";
+              $username="root";
+              $password="";
+              $database="si_pimpao";
+
+              $db = mysqli_connect($servidor,$username,$password,$database);
+              if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
+
+              $seleciona = "SELECT * FROM vendedora ORDER BY nome ASC";
+              $query=mysqli_query($db,$seleciona);
+              $i=0;
+              while($row = mysqli_fetch_array($query)){
+                  echo "<li><a href='listar_vendas_mes.php?vendedora=$row[1]'>";
+                  echo $row[1];
+                  echo "</a></li>";
+              }
               ?>
            </ul>
 
