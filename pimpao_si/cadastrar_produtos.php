@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 require_once("seguranca.php");
 if ($_SESSION['userAuthenticated']===NULL) {
@@ -132,7 +131,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
         </a>
         <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
           <li>
-            <li class="start "> <a href="/perfil/{{user.pk}}"> <i class="fa fa-user" style="color: white"></i><span class="title">&nbsp;&nbsp;Meu Perfil</span></a>
+            <li class="start ">
             <a href="../pimpao_si/logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
           </li>
        </ul>
@@ -287,9 +286,9 @@ if ($_SESSION['userAuthenticated']===NULL) {
             </div>
             <div class="grid-body ">
                 <form name="form_produtos" action="sucesso_produtos.php" method="post">
-                    Nome: <input type="text" name="nome">
-                    Código: <input type="number" name="codigo">
-                    Preço: <input type="number" name="preco">
+                    Nome: <br><input type="text" name="nome"><br><br>
+                    Código: <br><input type="number" name="codigo"><br><br>
+                    Preço: <br><input type="number" name="preco"><br><br>
                     <input type="submit" value="Cadastrar" />
                 </form>
             </div>
@@ -297,13 +296,6 @@ if ($_SESSION['userAuthenticated']===NULL) {
         </div>
       </div>
   </div>
-<!-- Footer -->
-<footer id="page-footer" class="content-mini">
-    <div class="pull-right">
-        Developed by t2g5</a>
-    </div>
-</footer>
-<!-- END Footer -->
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="../static/demo/HTML/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>

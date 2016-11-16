@@ -127,7 +127,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
      <ul class="nav quick-section">
       <li class="quicklinks">
         <a data-toggle="dropdown" class="dropdown-toggle  pull-right " href="#" id="user-options">
-          <div class="fa fa-power-off"></div>
+          <div class="iconset top-settings-dark"></div>
         </a>
         <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
           <li>
@@ -342,13 +342,6 @@ if ($_SESSION['userAuthenticated']===NULL) {
         </div>
       </div>
   </div>
-<!-- Footer -->
-<footer id="page-footer" class="content-mini">
-    <div class="pull-right">
-        Developed by t2g5</a>
-    </div>
-</footer>
-<!-- END Footer -->
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="../static/demo/HTML/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>

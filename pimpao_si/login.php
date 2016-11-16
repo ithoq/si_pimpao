@@ -84,9 +84,6 @@
                   </button>
                 </div>
                 <br>
-                <div class="checkbox checkbox check-success">
-                  <a href="/recuperar_senha/">Problemas para logar?</a>&nbsp;&nbsp; <input id="checkbox1" type="checkbox" value="1">
-                </div>
 
               </div>
             </div>

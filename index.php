@@ -130,8 +130,8 @@ if ($_SESSION['userAuthenticated']===NULL) {
         </a>
         <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
           <li>
-            <li class="start "> <a href="/perfil/{{user.pk}}"> <i class="fa fa-user" style="color: white"></i><span class="title">&nbsp;&nbsp;Meu Perfil</span></a>
-            <a href="pimpao_si/logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
+            <li class="start ">
+            <a href="../si_pimpao/pimpao_si/logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
           </li>
        </ul>
       </li>
@@ -232,14 +232,6 @@ if ($_SESSION['userAuthenticated']===NULL) {
     </div>
     </div> -->
 <!-- END CONTAINER -->
-
-<!-- Footer -->
-<footer id="page-footer">
-    <div class="pull-right">
-        Developed by t2g5</a>
-    </div>
-</footer>
-<!-- END Footer -->
 
 
 <script src="static/demo/HTML/assets/plugins/pace/pace.min.js" type="text/javascript"></script>

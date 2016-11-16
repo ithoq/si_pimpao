@@ -131,7 +131,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
         </a>
         <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
           <li>
-            <li class="start "> <a href="/perfil/{{user.pk}}"> <i class="fa fa-user" style="color: white"></i><span class="title">&nbsp;&nbsp;Meu Perfil</span></a>
+            <li class="start ">
             <a href="../pimpao_si/logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
           </li>
        </ul>
@@ -285,24 +285,17 @@ if ($_SESSION['userAuthenticated']===NULL) {
             </div>
             <div class="grid-body ">
                 <form name="form_vendedora" action="sucesso_vendas.php" method="post">
-                    Valor: <input type="number" step="0.01" name="valor">
-                    Vendedora: <input type="text" name="vendedora">
-                    Data: <input type="date" name="data" value="<?php echo date('Y-m-d'); ?>" />
-                    Tipo de venda: <input type="text" name="tipo">
-                    <input type="submit" value="entra" />
+                    Valor: <br><input type="number" step="0.01" name="valor"><br><br>
+                    Vendedora: <br><input type="text" name="vendedora"><br><br>
+                    Data: <br><input type="date" name="data" value="<?php echo date('Y-m-d'); ?>" /><br><br>
+                    Tipo de venda: <br><input type="text" name="tipo"><br>
+                    <br><input type="submit" value="Cadastrar" />
                 </form>
             </div>
           </div>
         </div>
       </div>
   </div>
-<!-- Footer -->
-<footer id="page-footer" class="content-mini">
-    <div class="pull-right">
-        Developed by t2g5</a>
-    </div>
-</footer>
-<!-- END Footer -->
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="../static/demo/HTML/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>

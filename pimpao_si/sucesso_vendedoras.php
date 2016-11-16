@@ -131,7 +131,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
         </a>
         <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
           <li>
-            <li class="start "> <a href="/perfil/{{user.pk}}"> <i class="fa fa-user" style="color: white"></i><span class="title">&nbsp;&nbsp;Meu Perfil</span></a>
+            <li class="start ">
             <a href="../pimpao_si/logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
           </li>
        </ul>
@@ -301,10 +301,10 @@ if ($_SESSION['userAuthenticated']===NULL) {
                 $result = mysqli_query($db,$query);
                 if (!$result)
                 { echo "Erro de gravação!<br>"; return; }
-                else
+                /*else
                 {
-                    echo "Cadastro realizado com sucesso! <br>";
-                    echo "Dados da vendedora:<br>";
+                    echo "<b><h4>Cadastro realizado com sucesso!</h4></b> <br><br>";
+                    echo "<h5>Dados da vendedora:</h5><br>";
                     echo "Nome:";
                     echo $_POST['nome'];
                     echo "<br>Telefone:";
@@ -313,8 +313,35 @@ if ($_SESSION['userAuthenticated']===NULL) {
                     echo $_POST['email'];
                     echo "<br>O que deseja fazer agora?<br>";
                     mysqli_close($db);
-                }
+                }*/
             ?>
+            <div class="row">
+        <div class="col-md-6">
+          <div class="grid simple">
+            <div class="grid-title no-border">
+              <h2>Cadastro realizado com sucesso!</h2>
+            <div class="grid-body no-border">
+              <div class="row-fluid">
+                <div class="scroller scrollbar-dynamic" data-height="220px">
+                  <h3>
+                  <p>
+                    <?php
+                      echo "<span class='semi-bold'>Dados da vendedora:</span><br>";
+                      echo "<p>Nome: ";
+                      echo $_POST['nome'];
+                      echo "<br>Telefone: ";
+                      echo $_POST['telefone'];
+                      echo "<br>Email: ";
+                      echo $_POST['email'];
+                      echo "<br><br>O que deseja fazer agora?</p></br>";
+                      mysqli_close($db);
+                    ?>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
                 <a href="cadastrar_vendedoras.php">
                     <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Cadastrar outra Vendedora</button>
                 </a>
@@ -327,13 +354,6 @@ if ($_SESSION['userAuthenticated']===NULL) {
         </div>
       </div>
   </div>
-<!-- Footer -->
-<footer id="page-footer" class="content-mini">
-    <div class="pull-right">
-        Developed by t2g5</a>
-    </div>
-</footer>
-<!-- END Footer -->
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="../static/demo/HTML/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
