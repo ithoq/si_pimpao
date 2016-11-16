@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 16, 2016 at 05:03 
+-- Generation Time: Nov 16, 2016 at 03:19 
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -19,28 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `si_pimpao`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `login`
---
-
-CREATE TABLE `login` (
-  `idlogin` int(11) NOT NULL,
-  `login` varchar(50) COLLATE utf8_bin NOT NULL,
-  `senha` varchar(50) COLLATE utf8_bin NOT NULL,
-  `nome` varchar(50) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Dumping data for table `login`
---
-
-INSERT INTO `login` (`idlogin`, `login`, `senha`, `nome`) VALUES
-(1, 'admin', 'admin', 'proprietaria'),
-(2, 'login1', 'login1', 'vendedora'),
-(3, 'login2', 'login2', 'vendedora');
 
 -- --------------------------------------------------------
 
@@ -160,12 +138,6 @@ INSERT INTO `vendedora` (`ID`, `nome`, `telefone`, `email`) VALUES
 --
 
 --
--- Indexes for table `login`
---
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`idlogin`);
-
---
 -- Indexes for table `produto`
 --
 ALTER TABLE `produto`
@@ -193,11 +165,6 @@ ALTER TABLE `vendedora`
 -- AUTO_INCREMENT for dumped tables
 --
 
---
--- AUTO_INCREMENT for table `login`
---
-ALTER TABLE `login`
-  MODIFY `idlogin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `produto`
 --

@@ -1,12 +1,10 @@
-<!DOCTYPE html>
 <?php
-require_once("seguranca.php");
+require_once("pimpao_si/seguranca.php");
 if ($_SESSION['userAuthenticated']===NULL) {
-    header("Location: ".$_SG['paginaLogin']."");
+    header("Location: pimpao_si/".$_SG['paginaLogin']."");
 }
 ?>
 <html>
-
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
@@ -27,11 +25,11 @@ if ($_SESSION['userAuthenticated']===NULL) {
 <link rel="icon" type="image/png" sizes="16x16" href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
 <link rel="manifest" href="../static/custom/favicon/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="../static/custom/favicon/ms-icon-144x144-pimpao.png">
+<meta name="msapplication-TileImage" content="../static/custom/favicon/balaozinho.png">
 <meta name="theme-color" content="#ffffff">
 
 
-<title>Produtos - SI Pimpão</title>
+<title>Home - SI Pimpão</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -189,14 +187,16 @@ if ($_SESSION['userAuthenticated']===NULL) {
               $query=mysqli_query($db,$seleciona);
               $i=0;
               while($row = mysqli_fetch_array($query)){
-                  echo "<li><a href='listar_vendas_mes.php?vendedora=$row[1]'>";
+                  echo "<li><a href='pimpao_si/listar_vendas_mes.php?vendedora=$row[1]'>";
                   echo $row[1];
                   echo "</a></li>";
               }
               ?>
            </ul>
+
         </li>
         <li class="start "> <a href="../pimpao_si/listar_vendedoras.php"> <i class="fa fa-users" style="color: white"></i><span class="title">Vendedoras</span> </a>
+
 <!-- {# FIM DE Menu Lateral#} -->
       </ul>
       <!-- END SIDEBAR MENU -->
@@ -213,8 +213,8 @@ if ($_SESSION['userAuthenticated']===NULL) {
   </div> -->
   <!-- END SIDEBAR -->
   <!-- BEGIN PAGE CONTAINER-->
-<!--   <div class="page-content"> </div>
- -->    <!-- <div id="portlet-config" class="modal hide">
+  <div class="page-content">
+    <!-- <div id="portlet-config" class="modal hide">
      <div class="modal-header">
         <button data-dismiss="modal" class="close" type="button"></button>
         <h3>Widget Settings</h3>
@@ -222,17 +222,24 @@ if ($_SESSION['userAuthenticated']===NULL) {
       <div class="modal-body"> Widget settings form goes here </div>
     </div>
     <div class="clearfix"></div>-->
-<!--     <div class="content">
- -->    <!--   <div class="page-title"> <i class="icon-custom-left"></i>
-      </div>
-  </div> -->
     <div class="content">
+      <div class="page-title"><!--  <i class="icon-custom-left"></i> -->
+      </div>
+  </div>
+    <!-- <div class="content">
     <div class="page-title">
       <h3>Home</h3>
     </div>
-    </div>
+    </div> -->
 <!-- END CONTAINER -->
 
+<!-- Footer -->
+<footer id="page-footer">
+    <div class="pull-right">
+        Developed by t2g5</a>
+    </div>
+</footer>
+<!-- END Footer -->
 
 
 <script src="../static/demo/HTML/assets/plugins/pace/pace.min.js" type="text/javascript"></script>
@@ -252,101 +259,5 @@ if ($_SESSION['userAuthenticated']===NULL) {
 <!-- END CORE TEMPLATE JS -->
 
 </script>
-
-<!-- Chamamos o block da mãe aqui -->
-
-
-<link href="../static/demo/HTML/assets/plugins/bootstrap-select2/select2.css" rel="stylesheet" type="text/css" media="screen"/>
-<link href="../static/demo/HTML/assets/plugins/jquery-datatable/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/datatables-responsive/css/datatables.responsive.css" rel="stylesheet" type="text/css" media="screen"/>
-<!-- BEGIN PLUGIN CSS -->
-<link href="../static/demo/HTML/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
-<link href="../static/demo/HTML/assets/plugins/bootstrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/bootstrapv3/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/animate.min.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css"/>
-<!-- END PLUGIN CSS -->
-<!-- BEGIN CORE CSS FRAMEWORK -->
-<link href="../static/demo/HTML/webarch/css/webarch.css" rel="stylesheet" type="text/css"/>
-<!-- END CORE CSS FRAMEWORK -->
-
-<!-- BEGIN CONTAINER -->
-
-<div class="page-content">
-<div class="clearfix"></div>
-      <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-      <div class="row-fluid">
-        <div class="span12">
-          <div class="grid simple ">
-            <div class="grid-title">
-              <h3> Lista de Produtos em Estoque<span class="semi-bold"></span> </h3>
-              <div class="tools"></div>
-            </div>
-            <div class="grid-body ">
-            <a href="cadastrar_produtos.php" >
-              <button type="button" class="btn btn-primary btn-cons" style='background-color: #fcc400'>Cadastrar Produto</button>
-            </a>
-              <table class="table" id="example2" >
-                <thead>
-                    <tr>
-                        <th>Produto</th>
-                        <th>Código</th>
-                        <th>Preço</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    $servidor="localhost";
-                    $username="root";
-                    $password="";
-                    $database="si_pimpao";
-
-                    $db = mysqli_connect($servidor,$username,$password,$database);
-                    if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
-
-                    $seleciona = "SELECT * FROM produto ";
-                    $query=mysqli_query($db,$seleciona);
-                    $i=0;
-                    while($row = mysqli_fetch_array($query)){
-                        echo "<tr>";
-                        echo "<td>";
-                        echo $row[1];
-                        echo "</td>";
-                        echo "<td>";
-                        echo $row[2];
-                        echo "</td>";
-                        echo "<td>";
-                        echo $row[3];
-                        echo "</td>";
-                        echo "</tr>";
-                    }
-                    ?>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
-<!-- Footer -->
-<footer id="page-footer" class="content-mini">
-    <div class="pull-right">
-        Developed by t2g5</a>
-    </div>
-</footer>
-<!-- END Footer -->
-
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="../static/demo/HTML/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../static/demo/HTML/assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript" ></script>
-<script src="../static/demo/HTML/assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript" ></script>
-<script type="text/javascript" src="../static/demo/HTML/assets/plugins/datatables-responsive/js/datatables.responsive.js"></script>
-<script type="text/javascript" src="../static/demo/HTML/assets/plugins/datatables-responsive/js/lodash.min.js"></script>
-<!-- END PAGE LEVEL JS INIT -->
-<script src="../static/custom/javascript/datatables-editado.js" type="text/javascript"></script>
-
-</div>
-
 </body>
 </html>

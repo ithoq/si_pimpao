@@ -67,7 +67,7 @@
       </div>
       <div class="tiles grey p-t-20 p-b-20 no-margin text-black tab-content">
         <div role="tabpanel" class="tab-pane active" id="tab_login">
-          <form class="animated fadeIn validate" role="form" method="post">
+          <form action="valida.php" class="animated fadeIn validate" role="form" method="post">
             <div class="row form-row m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
               <div class="col-md-6 col-sm-6">
                 <input class="form-control" id="username" name="login" placeholder="Usuário" type="username" required>
@@ -92,29 +92,29 @@
             </div>
           </form>
         </div>
-        
+
       </div>
     </div>
   </div>
 </div>
 <!-- END CONTAINER -->
 
-<script src="../static/demo/HTML/assets/plugins/pace/pace.min.js" type="text/javascript"></script>  
-<!-- BEGIN JS DEPENDECENCIES--> 
-<script src="../static/demo/HTML/assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script> 
-<script src="../static/demo/HTML/assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script> 
-<script src="../static/demo/HTML/assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script> 
-<script src="../static/demo/HTML/assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script> 
+<script src="../static/demo/HTML/assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<!-- BEGIN JS DEPENDECENCIES-->
+<script src="../static/demo/HTML/assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="../static/demo/HTML/assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../static/demo/HTML/assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
+<script src="../static/demo/HTML/assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
 <script src="../static/demo/HTML/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../static/demo/HTML/assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../static/demo/HTML/assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../static/demo/HTML/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<!-- END CORE JS DEPENDECENCIES--> 
-<!-- BEGIN CORE TEMPLATE JS --> 
-<script src="../static/demo/HTML/webarch/js/webarch.js" type="text/javascript"></script> 
-<script src="../static/demo/HTML/assets/js/chat.js" type="text/javascript"></script> 
+<!-- END CORE JS DEPENDECENCIES-->
+<!-- BEGIN CORE TEMPLATE JS -->
+<script src="../static/demo/HTML/webarch/js/webarch.js" type="text/javascript"></script>
+<script src="../static/demo/HTML/assets/js/chat.js" type="text/javascript"></script>
 <!-- END CORE TEMPLATE JS -->
-        
+
 </body>
 
 </html>

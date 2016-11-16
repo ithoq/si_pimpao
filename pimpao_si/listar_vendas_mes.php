@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+require_once("seguranca.php");
+if ($_SESSION['userAuthenticated']===NULL) {
+    header("Location: ".$_SG['paginaLogin']."");
+}
+?>
 <html>
 
 <head>
@@ -68,7 +74,7 @@
 
       <div class="container">
         <div id="element">
-          <a href="../../pimpao_si/base.php">
+          <a href="../index.php">
             <img src="../../static/custom/logo.png" class="logo" alt=""  width="250" height="60" align="middle" style="margin: 0px 10px 0px -15px"/>
           </a>
         </div>
@@ -127,7 +133,7 @@
         <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
           <li>
             <li class="start "> <a href="/perfil/{{user.pk}}"> <i class="fa fa-user" style="color: white"></i><span class="title">&nbsp;&nbsp;Meu Perfil</span></a>
-            <a href="/logout/"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
+            <a href="/pimpao_si/logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
           </li>
        </ul>
       </li>
