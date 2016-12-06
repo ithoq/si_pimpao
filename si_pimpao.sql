@@ -118,21 +118,22 @@ CREATE TABLE `venda` (
   `valor` float NOT NULL,
   `vendedora` text COLLATE utf8_bin NOT NULL,
   `data` date NOT NULL,
-  `tipo` text COLLATE utf8_bin NOT NULL
+  `tipo` text COLLATE utf8_bin NOT NULL,
+  `numero` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table 'venda'
 --
 
-INSERT INTO `venda` (`ID`, `valor`, `vendedora`, `data`, `tipo`) VALUES
-(1, 666, 'Marjorie', '2016-12-01', 'cheque'),
-(2, 3414, 'Pedro', '2015-11-18', 'dinheiro'),
-(3, 41234, 'das', '2016-11-15', 'asda'),
-(4, 878797, 'bajsgdj', '2016-11-16', 'hdaksh'),
-(5, 696927, 'das', '2016-11-19', 'cheque'),
-(6, 712362000, 'das', '2016-11-01', 'dahs'),
-(7, 21212, 'Maria', '2016-11-16', 'cheque');
+INSERT INTO `venda` (`ID`, `valor`, `vendedora`, `data`, `tipo`, `numero`) VALUES
+(1, 666, 'Marjorie', '2016-12-01', 'cheque', 1),
+(2, 3414, 'Pedro', '2015-11-18', 'dinheiro', 2),
+(3, 41234, 'das', '2016-11-15', 'asda', 3),
+(4, 878797, 'bajsgdj', '2016-11-16', 'hdaksh', 4),
+(5, 696927, 'das', '2016-11-19', 'cheque', 5),
+(6, 712362000, 'das', '2016-11-01', 'dahs', 6),
+(7, 21212, 'Maria', '2016-11-16', 'cheque', 7);
 
 -- --------------------------------------------------------
 

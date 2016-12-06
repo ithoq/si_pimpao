@@ -295,10 +295,11 @@ if ($_SESSION['userAuthenticated']===NULL) {
                     $vendedora=$_POST['vendedora'];
                     $data=$_POST['data'];
                     $tipo=$_POST['tipo'];
+                    $numero=$_POST['numero'];
 
                     $db = mysqli_connect($servidor,$username,$password,$database);
                     if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
-                    $query = "INSERT INTO venda VALUES ('','$valor','$vendedora','$data', '$tipo')";
+                    $query = "INSERT INTO venda VALUES ('','$valor','$vendedora','$data', '$tipo', '$numero')";
                     $result = mysqli_query($db,$query);
                     if (!$result)
                     { echo "Erro de gravação!<br>"; return; }
@@ -338,6 +339,8 @@ if ($_SESSION['userAuthenticated']===NULL) {
                         echo $_POST['data'];
                         echo "<br>Tipo: ";
                         echo $_POST['tipo'];
+                        echo "<br>Número da venda: ";
+                        echo $_POST['numero'];
                         echo "<br><br>O que deseja fazer agora?<br><br>";
                         mysqli_close($db);
                     ?>

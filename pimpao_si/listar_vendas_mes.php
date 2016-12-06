@@ -288,6 +288,30 @@ if ($_SESSION['userAuthenticated']===NULL) {
               <div class="tools"></div>
             </div>
             <div class="grid-body ">
+              <h4>Valor vendido no mês: 
+                    <strong>R$ <?php
+                    // include "classes.php";
+
+                    $servidor="localhost";
+                    $username="root";
+                    $password="";
+                    $database="si_pimpao";
+
+                    $db = mysqli_connect($servidor,$username,$password,$database);
+                    if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
+
+                    if (!empty($_GET['vendedora'])){
+                        $temp = $_GET['vendedora'];
+                    }
+                    $seleciona = "SELECT * FROM venda WHERE year(data) = year(curdate()) and month(data) = month(curdate()) and vendedora = '$temp' ORDER BY data ASC";
+                    $query=mysqli_query($db,$seleciona);
+                    $i=0;
+                    while($row = mysqli_fetch_array($query)){
+                      $i=$i + $row[1];
+                    }
+                    $valor = number_format($i, 2, ',', ' ');
+                    echo $valor
+                    ?></strong></h4>
                 <a href="cadastrar_vendas.php">
                     <button type="button" class="btn btn-primary btn-cons" style='background-color: #ff5a58'>Cadastrar Venda</button>
                 </a>
@@ -296,6 +320,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
                  <tr>
                    <th>Data</th>
                    <th>Valor</th>
+                   <th>Número da venda</th>
                    <th>Editar</th>
                    <th>Deletar</th>
                  </tr>
@@ -322,7 +347,10 @@ if ($_SESSION['userAuthenticated']===NULL) {
                         echo $row[3];
                         echo "</td>";
                         echo "<td>";
-                        echo $row[1];
+                        echo "R$ ".number_format($row[1], 2, ',', ' ');
+                        echo "</td>";
+                        echo "<td>";
+                        echo $row[5];
                         echo "</td>";
                         echo "<td>";
                         echo "<a href='cadastrar_produtos.php'>";

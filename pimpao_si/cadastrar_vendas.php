@@ -286,9 +286,29 @@ if ($_SESSION['userAuthenticated']===NULL) {
             <div class="grid-body ">
                 <form name="form_vendedora" action="sucesso_vendas.php" method="post">
                     Valor: <br><input type="number" step="0.01" name="valor"><br><br>
-                    Vendedora: <br><input type="text" name="vendedora"><br><br>
+                    Vendedora: <br>
+                      <select name="vendedora">
+                          <?php
+                          $servidor="localhost";
+                          $username="root";
+                          $password="";
+                          $database="si_pimpao";
+
+                          $db = mysqli_connect($servidor,$username,$password,$database);
+                          if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
+
+                          $seleciona = "SELECT * FROM vendedora ORDER BY nome ASC";
+                          $query=mysqli_query($db,$seleciona);
+                          $i=0;
+                          while($row = mysqli_fetch_array($query)){
+                              echo "<option value=$row[1]>".$row[1];
+                              echo "</option>";
+                          }
+                          ?>
+                      </select><br><br>
                     Data: <br><input type="date" name="data" value="<?php echo date('Y-m-d'); ?>" /><br><br>
                     Tipo de venda: <br><input type="text" name="tipo"><br>
+                    Número da venda: <br><input type="number" name="numero"><br>
                     <br><input type="submit" value="Cadastrar" />
                 </form>
             </div>
