@@ -177,7 +177,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
           <ul class="sub-menu">
               <?php
               $servidor="localhost";
-              $username="t2g05";
+              $username="t2g05@localhost";
               $password="t2g05@10";
               $database="si_pimpao";
 
@@ -299,7 +299,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
                 <tbody>
                     <?php
                     $servidor="localhost";
-                    $username="t2g05";
+                    $username="t2g05@localhost";
                     $password="t2g05@10";
                     $database="si_pimpao";
 

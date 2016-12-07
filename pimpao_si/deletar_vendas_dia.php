@@ -1,6 +1,6 @@
 <?php
 $servidor="localhost";
-$username="t2g05";
+$username="t2g05@localhost";
 $password="t2g05@10";
 $database="si_pimpao";
 
