@@ -318,7 +318,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
                         echo $row[2];
                         echo "</td>";
                         echo "<td>";
-                        echo $row[3];
+                        echo "R$ ".number_format($row[3], 2, ',', ' ');
                         echo "</td>";
                         echo "<td>";
                         echo "<a href='editar_produtos.php?id=";

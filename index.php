@@ -168,9 +168,9 @@ if ($_SESSION['userAuthenticated']===NULL) {
       <br>
       <ul>
 <!-- COMEÇO DE Menu Lateral -->
-        <li class="start "> <a href="pimpao_si/listar_produtos.php"> <i class="fa fa-dropbox" style="color: white"></i><span class="title">Produtos em estoque</span> </a>
+        <li class="start "> <a href="listar_produtos.php"> <i class="fa fa-dropbox" style="color: white"></i><span class="title">Produtos em estoque</span> </a>
 
-        <li class="start "> <a href="pimpao_si/listar_vendas_dia.php"> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do dia</span> </a>
+        <li class="start "> <a href="listar_vendas_dia.php"> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do dia</span> </a>
 
         <li class="start "> <a> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do mês</span> </a>
           <ul class="sub-menu">
@@ -187,14 +187,14 @@ if ($_SESSION['userAuthenticated']===NULL) {
               $query=mysqli_query($db,$seleciona);
               $i=0;
               while($row = mysqli_fetch_array($query)){
-                  echo "<li><a href='pimpao_si/listar_vendas_mes.php?vendedora=$row[1]'>";
+                  echo "<li><a href='listar_vendas_mes.php?vendedora=$row[1]'>";
                   echo $row[1];
                   echo "</a></li>";
               }
               ?>
            </ul>
         </li>
-        <li class="start "> <a href="pimpao_si/listar_vendedoras.php"> <i class="fa fa-users" style="color: white"></i><span class="title">Vendedoras</span> </a>
+        <li class="start "> <a href="listar_vendedoras.php"> <i class="fa fa-users" style="color: white"></i><span class="title">Vendedoras</span> </a>
         </li>
 
 <!-- {# FIM DE Menu Lateral#} -->
