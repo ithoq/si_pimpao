@@ -226,11 +226,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
  -->    <!--   <div class="page-title"> <i class="icon-custom-left"></i>
       </div>
   </div> -->
-    <div class="content">
-    <div class="page-title">
-      <h3>Home</h3>
-    </div>
-    </div>
+
 <!-- END CONTAINER -->
 
 
