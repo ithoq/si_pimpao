@@ -280,7 +280,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
         <div class="span12">
           <div class="grid simple ">
             <div class="grid-title">
-              <h3> Lista de Vendedoras<span class="semi-bold"></span> </h3>
+              <h3> Cadastrar Vendas<span class="semi-bold"></span> </h3>
               <div class="tools"></div>
             </div>
             <div class="grid-body ">
@@ -302,7 +302,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
                     $query = "INSERT INTO venda VALUES ('','$valor','$vendedora','$data', '$tipo', '$numero')";
                     $result = mysqli_query($db,$query);
                     if (!$result)
-                    { echo "Erro de gravação!<br>"; return; }
+                    { echo "Erro de gravação!<br>"; return;}
                     else
                     /*{
                         echo "Cadastro realizado com sucesso! <br>";

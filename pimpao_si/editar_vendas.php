@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 require_once("seguranca.php");
 if ($_SESSION['userAuthenticated']===NULL) {
@@ -31,7 +30,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
 <meta name="theme-color" content="#ffffff">
 
 
-<title>Vendas do Dia - SI Pimpão</title>
+<title>Vendedoras - SI Pimpão</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -83,7 +82,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
       <!-- END LOGO -->
       <ul class="nav pull-right notifcation-center">
         <li class="dropdown hidden-xs hidden-sm">
-     <!--     <a href="index.html" class="dropdown-toggle active" data-toggle="">
+     <!--     <a href="index.php" class="dropdown-toggle active" data-toggle="">
             <div class="iconset top-home"></div>
           </a> -->
         </li>
@@ -132,7 +131,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
         </a>
         <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
           <li>
-            <li class="start "> <a href="/perfil/{{user.pk}}"> <i class="fa fa-user" style="color: white"></i><span class="title">&nbsp;&nbsp;Meu Perfil</span></a>
+            <li class="start ">
             <a href="../pimpao_si/logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
           </li>
        </ul>
@@ -210,7 +209,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
     </div>
     <div class="pull-right">
       <div class="details-status"> <span class="animate-number" data-value="86" data-animation-duration="560">86</span>% </div>
-      <a href="lockscreen.html"><i class="fa fa-power-off"></i></a></div>
+      <a href="lockscreen.php"><i class="fa fa-power-off"></i></a></div>
   </div> -->
   <!-- END SIDEBAR -->
   <!-- BEGIN PAGE CONTAINER-->
@@ -276,98 +275,49 @@ if ($_SESSION['userAuthenticated']===NULL) {
 
 <div class="page-content">
 <div class="clearfix"></div>
+
       <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
       <div class="row-fluid">
         <div class="span12">
           <div class="grid simple ">
             <div class="grid-title">
-              <h3>Lista de Vendas do Dia: <strong><?php echo date('d-m-Y'); ?></strong><span class="semi-bold"></span> </h3>
+              <h3> Editar Vendas<span class="semi-bold"></span> </h3>
               <div class="tools"></div>
             </div>
             <div class="grid-body ">
-                <h4>Valor vendido no dia:
-                    <strong>R$ <?php
-                    // include "classes.php";
+                <?php
+                $servidor="localhost";
+                $username="root";
+                $password="";
+                $database="si_pimpao";
 
-                    $servidor="localhost";
-                    $username="root";
-                    $password="";
-                    $database="si_pimpao";
+                $db = mysqli_connect($servidor,$username,$password,$database);
+                if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
 
-                    $db = mysqli_connect($servidor,$username,$password,$database);
-                    if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
+                $seleciona = "SELECT * FROM venda where id='".$_GET['id']."'";
+                $query=mysqli_query($db,$seleciona);
+                $row = mysqli_fetch_array($query);
+                ?>
 
-                    $seleciona = "SELECT * FROM venda WHERE data = CURDATE()";
-                    $query=mysqli_query($db,$seleciona);
-                    $i=0;
-                    while($row = mysqli_fetch_array($query)){
-                      $i=$i + $row[1];
-                    }
-                    $valor = number_format($i, 2, ',', ' ');
-                    echo $valor
-                    ?></strong></h4>
-                <a href="cadastrar_vendas.php">
-                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #01eeea'>Cadastrar Venda</button>
-                </a>
-              <table class="table" id="example2" >
-               <thead>
-                 <tr>
-                   <th>Vendedora</th>
-                   <th>Valor</th>
-                   <th>Forma de Pagamento</th>
-                   <th>Número da venda</th>
-                   <th>Editar</th>
-                   <th>Deletar</th>
-                 </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    // include "classes.php";
-
-                    $servidor="localhost";
-                    $username="root";
-                    $password="";
-                    $database="si_pimpao";
-
-                    $db = mysqli_connect($servidor,$username,$password,$database);
-                    if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
-
-                    $seleciona = "SELECT * FROM venda WHERE data = CURDATE()";
-                    $query=mysqli_query($db,$seleciona);
-                    $i=0;
-                    while($row = mysqli_fetch_array($query)){
-                        echo "<tr>";
-                        echo "<td>";
-                        echo $row[2];
-                        echo "</td>";
-                        echo "<td>";
-                        echo "R$ ".number_format($row[1], 2, ',', ' ');
-                        echo "</td>";
-                        echo "<td>";
-                        echo $row[4];
-                        echo "</td>";
-                        echo "<td>";
-                        echo $row[5];
-                        echo "</td>";
-                        echo "<td>";
-                        echo "<a href='editar_vendas.php?id=";
-                        echo $row[0];
-                        echo "'>";
-                        echo "<button class='btn btn-primary btn-xs btn-mini' style = 'background-color: #FFA506'><i class='fa fa-edit'></i></button>";
-                        echo "</a>";
-                        echo "</td>";
-                        echo "<td>";
-                        echo "<a href='deletar_vendas_dia.php?id=";
-                        echo $row[0];
-                        echo "'>";
-                        echo "<button class='btn btn-primary btn-xs btn-mini' style = 'background-color: #FF0707'><i class='fa fa-times'></i></button>";
-                        echo "</a>";
-                        echo "</td>";
-                        echo "</tr>";
-                    }
-                    ?>
-                </tbody>
-              </table>
+                <form name="form_vendas" action="sucesso_editar_vendas.php?id=<?php echo $row[0]; ?>" method="post">
+                    Valor: <br><input type="number" step="0.01" name="valor" value="<?php echo $row['valor']; ?>"><br><br>
+                    Vendedora: <br>
+                        <select name="vendedora">
+                            <?php
+                            $seleciona2 = "SELECT * FROM vendedora ORDER BY nome ASC";
+                            $query2=mysqli_query($db,$seleciona2);
+                            $i=0;
+                            while($row2 = mysqli_fetch_array($query2)){
+                                echo "<option value=$row2[1]>".$row2[1];
+                                echo "</option>";
+                            }
+                            ?>
+                        </select><br><br>
+                    Data: <br><input type="date" name="data" value="<?php echo $row['data']; ?>"><br><br>
+                    Tipo de venda: <br><input type="text" name="tipo" value="<?php echo $row['tipo']; ?>"><br><br>
+                    Número da venda: <br><input type="number" name="numero" value="<?php echo $row['numero']; ?>"><br><br>
+                    <input type="submit" value="Editar" />
+                </form>
             </div>
           </div>
         </div>

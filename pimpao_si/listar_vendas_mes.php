@@ -288,7 +288,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
               <div class="tools"></div>
             </div>
             <div class="grid-body ">
-              <h4>Valor vendido no mês: 
+              <h4>Valor vendido no mês:
                     <strong>R$ <?php
                     // include "classes.php";
 
@@ -353,12 +353,16 @@ if ($_SESSION['userAuthenticated']===NULL) {
                         echo $row[5];
                         echo "</td>";
                         echo "<td>";
-                        echo "<a href='cadastrar_produtos.php'>";
+                        echo "<a href='editar_vendas.php?id=";
+                        echo $row[0];
+                        echo "'>";
                         echo "<button class='btn btn-primary btn-xs btn-mini' style = 'background-color: #FFA506'><i class='fa fa-edit'></i></button>";
                         echo "</a>";
                         echo "</td>";
                         echo "<td>";
-                        echo "<a href='cadastrar_produtos.php'>";
+                        echo "<a href='deletar_vendas_mes.php?id=";
+                        echo $row[0];
+                        echo "'>";
                         echo "<button class='btn btn-primary btn-xs btn-mini' style = 'background-color: #FF0707'><i class='fa fa-times'></i></button>";
                         echo "</a>";
                         echo "</td>";

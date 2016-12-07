@@ -321,13 +321,15 @@ if ($_SESSION['userAuthenticated']===NULL) {
                         echo $row[3];
                         echo "</td>";
                         echo "<td>";
-                        echo "<a href='cadastrar_produtos.php'>";
+                        echo "<a href='editar_produtos.php?id=";
+                        echo $row[0];
+                        echo "'>";
                         echo "<button class='btn btn-primary btn-xs btn-mini' style = 'background-color: #FFA506'><i class='fa fa-edit'></i></button>";
                         echo "</a>";
                         echo "</td>";
                         echo "<td>";
-                        echo "<a href='deletar_produtos.php?nome=";
-                        echo $row[1];
+                        echo "<a href='deletar_produtos.php?id=";
+                        echo $row[0];
                         echo "'>";
                         echo "<button class='btn btn-primary btn-xs btn-mini' style = 'background-color: #FF0707'><i class='fa fa-times'></i></button>";
                         echo "</a>";
