@@ -14,8 +14,8 @@
 
  $_SG['servidor'] = 'localhost';    // Servidor MySQL
  $_SG['usuario'] = 't2g05';          // Usuário MySQL
- $_SG['senha'] = '';                // Senha MySQL
- $_SG['banco'] = 'si_pimpao';            // Banco de dados MySQL
+ $_SG['senha'] = 't2g05@10';                // Senha MySQL
+ $_SG['banco'] = 't2g05';            // Banco de dados MySQL
 
  $_SG['paginaLogin'] = 'login.php'; // Página de login
 
