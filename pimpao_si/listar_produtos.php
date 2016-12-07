@@ -11,22 +11,22 @@ if ($_SESSION['userAuthenticated']===NULL) {
 <meta charset="utf-8" />
 
 <!-- FAVICON RELATED -->
-<link rel="apple-touch-icon" sizes="57x57" href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
-<link rel="apple-touch-icon" sizes="60x60" href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
-<link rel="apple-touch-icon" sizes="76x76" href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
-<link rel="apple-touch-icon" sizes="120x120" href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
-<link rel="apple-touch-icon" sizes="144x144" href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
-<link rel="apple-touch-icon" sizes="152x152" href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
-<link rel="apple-touch-icon" sizes="180x180" href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
-<link rel="icon" type="image/png" sizes="96x96" href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../static/custom/favicon/ms-icon-144x144-pimpao.png">
-<link rel="manifest" href="../static/custom/favicon/manifest.json">
+<link rel="apple-touch-icon" sizes="57x57" href="static/custom/favicon/ms-icon-144x144-pimpao.png">
+<link rel="apple-touch-icon" sizes="60x60" href="static/custom/favicon/ms-icon-144x144-pimpao.png">
+<link rel="apple-touch-icon" sizes="72x72" href="static/custom/favicon/ms-icon-144x144-pimpao.png">
+<link rel="apple-touch-icon" sizes="76x76" href="static/custom/favicon/ms-icon-144x144-pimpao.png">
+<link rel="apple-touch-icon" sizes="114x114" href="static/custom/favicon/ms-icon-144x144-pimpao.png">
+<link rel="apple-touch-icon" sizes="120x120" href="static/custom/favicon/ms-icon-144x144-pimpao.png">
+<link rel="apple-touch-icon" sizes="144x144" href="static/custom/favicon/ms-icon-144x144-pimpao.png">
+<link rel="apple-touch-icon" sizes="152x152" href="static/custom/favicon/ms-icon-144x144-pimpao.png">
+<link rel="apple-touch-icon" sizes="180x180" href="static/custom/favicon/ms-icon-144x144-pimpao.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="static/custom/favicon/ms-icon-144x144-pimpao.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/custom/favicon/ms-icon-144x144-pimpao.png">
+<link rel="icon" type="image/png" sizes="96x96" href="static/custom/favicon/ms-icon-144x144-pimpao.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/custom/favicon/ms-icon-144x144-pimpao.png">
+<link rel="manifest" href="static/custom/favicon/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="../static/custom/favicon/ms-icon-144x144-pimpao.png">
+<meta name="msapplication-TileImage" content="static/custom/favicon/ms-icon-144x144-pimpao.png">
 <meta name="theme-color" content="#ffffff">
 
 
@@ -36,19 +36,19 @@ if ($_SESSION['userAuthenticated']===NULL) {
 <meta content="" name="author" />
 
 <!-- BEGIN PLUGIN CSS -->
-<link href="../static/demo/HTML/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
-<link href="../static/demo/HTML/assets/plugins/bootstrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/bootstrapv3/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/animate.min.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css"/>
+<link href="static/demo/HTML/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="static/demo/HTML/assets/plugins/bootstrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="static/demo/HTML/assets/plugins/bootstrapv3/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+<link href="static/demo/HTML/assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="static/demo/HTML/assets/plugins/animate.min.css" rel="stylesheet" type="text/css"/>
+<link href="static/demo/HTML/assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css"/>
 <!-- END PLUGIN CSS -->
 <!-- BEGIN CORE CSS FRAMEWORK -->
-<link href="../static/demo/HTML/webarch/css/webarch.css" rel="stylesheet" type="text/css"/>
+<link href="static/demo/HTML/webarch/css/webarch.css" rel="stylesheet" type="text/css"/>
 <!-- END CORE CSS FRAMEWORK -->
 
 <!-- Begin notifications -->
-<link rel="stylesheet" type="text/css" href="../static/demo/HTML/assets/plugins/bootstrap-toastr/toastr.min.css"/>
+<link rel="stylesheet" type="text/css" href="static/demo/HTML/assets/plugins/bootstrap-toastr/toastr.min.css"/>
 <!-- End notifications -->
 
 
@@ -74,7 +74,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
       <div class="container">
         <div id="element">
           <a href="../index.php">
-            <img src="../static/custom/logo.png" class="logo" alt=""  width="250" height="60" align="middle" style="margin: 0px 10px 0px -15px"/>
+            <img src="static/custom/logo.png" class="logo" alt=""  width="250" height="60" align="middle" style="margin: 0px 10px 0px -15px"/>
           </a>
         </div>
       </div>
@@ -154,7 +154,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
     <!-- BEGIN MINI-PROFILE -->
     <div class="page-sidebar-wrapper scrollbar-dynamic" id="main-menu-wrapper" >
       <div class="user-info-wrapper" >
-<!--         <div class="profile-wrapper"> <img src="../static/demo/HTML/assets/img/profiles/avatar.jpg"  alt="" data-src="../static/demo/HTML/assets/img/profiles/avatar.jpg" data-src-retina="../static/demo/HTML/assets/img/profiles/avatar2x.jpg" width="69" height="69" /> </div>
+<!--         <div class="profile-wrapper"> <img src="static/demo/HTML/assets/img/profiles/avatar.jpg"  alt="" data-src="static/demo/HTML/assets/img/profiles/avatar.jpg" data-src-retina="static/demo/HTML/assets/img/profiles/avatar2x.jpg" width="69" height="69" /> </div>
  -->        <div class="user-info">
           <div class="greeting">Menu</div>
 <!--           <div class="username">Biossistec Jr.</span></div>
@@ -234,20 +234,20 @@ if ($_SESSION['userAuthenticated']===NULL) {
 
 
 
-<script src="../static/demo/HTML/assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<script src="static/demo/HTML/assets/plugins/pace/pace.min.js" type="text/javascript"></script>
 <!-- BEGIN JS DEPENDECENCIES-->
-<script src="../static/demo/HTML/assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
-<script src="../static/demo/HTML/assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../static/demo/HTML/assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../static/demo/HTML/assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
-<script src="../static/demo/HTML/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
-<script src="../static/demo/HTML/assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
-<script src="../static/demo/HTML/assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
-<script src="../static/demo/HTML/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
+<script src="static/demo/HTML/assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="static/demo/HTML/assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="static/demo/HTML/assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
+<script src="static/demo/HTML/assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<script src="static/demo/HTML/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
+<script src="static/demo/HTML/assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
+<script src="static/demo/HTML/assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="static/demo/HTML/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 <!-- END CORE JS DEPENDECENCIES-->
 <!-- BEGIN CORE TEMPLATE JS -->
-<script src="../static/demo/HTML/webarch/js/webarch.js" type="text/javascript"></script>
-<script src="../static/demo/HTML/assets/js/chat.js" type="text/javascript"></script>
+<script src="static/demo/HTML/webarch/js/webarch.js" type="text/javascript"></script>
+<script src="static/demo/HTML/assets/js/chat.js" type="text/javascript"></script>
 <!-- END CORE TEMPLATE JS -->
 
 </script>
@@ -255,19 +255,19 @@ if ($_SESSION['userAuthenticated']===NULL) {
 <!-- Chamamos o block da mãe aqui -->
 
 
-<link href="../static/demo/HTML/assets/plugins/bootstrap-select2/select2.css" rel="stylesheet" type="text/css" media="screen"/>
-<link href="../static/demo/HTML/assets/plugins/jquery-datatable/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/datatables-responsive/css/datatables.responsive.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="static/demo/HTML/assets/plugins/bootstrap-select2/select2.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="static/demo/HTML/assets/plugins/jquery-datatable/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+<link href="static/demo/HTML/assets/plugins/datatables-responsive/css/datatables.responsive.css" rel="stylesheet" type="text/css" media="screen"/>
 <!-- BEGIN PLUGIN CSS -->
-<link href="../static/demo/HTML/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
-<link href="../static/demo/HTML/assets/plugins/bootstrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/bootstrapv3/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/animate.min.css" rel="stylesheet" type="text/css"/>
-<link href="../static/demo/HTML/assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css"/>
+<link href="static/demo/HTML/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="static/demo/HTML/assets/plugins/bootstrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="static/demo/HTML/assets/plugins/bootstrapv3/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+<link href="static/demo/HTML/assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="static/demo/HTML/assets/plugins/animate.min.css" rel="stylesheet" type="text/css"/>
+<link href="static/demo/HTML/assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css"/>
 <!-- END PLUGIN CSS -->
 <!-- BEGIN CORE CSS FRAMEWORK -->
-<link href="../static/demo/HTML/webarch/css/webarch.css" rel="stylesheet" type="text/css"/>
+<link href="static/demo/HTML/webarch/css/webarch.css" rel="stylesheet" type="text/css"/>
 <!-- END CORE CSS FRAMEWORK -->
 
 <!-- BEGIN CONTAINER -->
@@ -346,13 +346,13 @@ if ($_SESSION['userAuthenticated']===NULL) {
   </div>
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="../static/demo/HTML/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../static/demo/HTML/assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript" ></script>
-<script src="../static/demo/HTML/assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript" ></script>
-<script type="text/javascript" src="../static/demo/HTML/assets/plugins/datatables-responsive/js/datatables.responsive.js"></script>
-<script type="text/javascript" src="../static/demo/HTML/assets/plugins/datatables-responsive/js/lodash.min.js"></script>
+<script src="static/demo/HTML/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
+<script src="static/demo/HTML/assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript" ></script>
+<script src="static/demo/HTML/assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript" ></script>
+<script type="text/javascript" src="static/demo/HTML/assets/plugins/datatables-responsive/js/datatables.responsive.js"></script>
+<script type="text/javascript" src="static/demo/HTML/assets/plugins/datatables-responsive/js/lodash.min.js"></script>
 <!-- END PAGE LEVEL JS INIT -->
-<script src="../static/custom/javascript/datatables-editado.js" type="text/javascript"></script>
+<script src="static/custom/javascript/datatables-editado.js" type="text/javascript"></script>
 
 </div>
 
