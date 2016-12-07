@@ -1,7 +1,7 @@
 <?php
-require_once("pimpao_si/seguranca.php");
+require_once("seguranca.php");
 if ($_SESSION['userAuthenticated']===NULL) {
-    header("Location: pimpao_si/".$_SG['paginaLogin']."");
+    header("Location: ".$_SG['paginaLogin']."");
 }
 ?>
 <html>

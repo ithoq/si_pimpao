@@ -352,8 +352,8 @@ if ($_SESSION['userAuthenticated']===NULL) {
                 <a href="cadastrar_vendas.php">
                     <button type="button" class="btn btn-primary btn-cons" style='background-color: #fcc400'>Cadastrar Venda</button>
                 </a>
-                <a href="listar_vendas.php" >
-                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #fcc400'>Listar Vendas</button>
+                <a href="listar_vendas_dia.php" >
+                    <button type="button" class="btn btn-primary btn-cons" style='background-color: #fcc400'>Listar Vendas do dia</button>
                 </a>
                 <!-- END CONTENT -->
             </div>
