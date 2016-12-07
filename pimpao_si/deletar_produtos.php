@@ -1,7 +1,7 @@
 <?php
 $servidor="localhost";
-$username="root";
-$password="";
+$username="t2g05";
+$password="t2g05@10";
 $database="si_pimpao";
 
 $nome = $_GET['id'];

@@ -13,7 +13,7 @@
  // Evita que, ao mudar os dados do usuário no banco de dado o mesmo contiue logado.
 
  $_SG['servidor'] = 'localhost';    // Servidor MySQL
- $_SG['usuario'] = 'root';          // Usuário MySQL
+ $_SG['usuario'] = 't2g05';          // Usuário MySQL
  $_SG['senha'] = '';                // Senha MySQL
  $_SG['banco'] = 'si_pimpao';            // Banco de dados MySQL
 

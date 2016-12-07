@@ -177,8 +177,8 @@ if ($_SESSION['userAuthenticated']===NULL) {
           <ul class="sub-menu">
               <?php
               $servidor="localhost";
-              $username="root";
-              $password="";
+              $username="t2g05";
+              $password="t2g05@10";
               $database="si_pimpao";
 
               $db = mysqli_connect($servidor,$username,$password,$database);
@@ -290,8 +290,8 @@ if ($_SESSION['userAuthenticated']===NULL) {
                       <select name="vendedora">
                           <?php
                           $servidor="localhost";
-                          $username="root";
-                          $password="";
+                          $username="t2g05";
+                          $password="t2g05@10";
                           $database="si_pimpao";
 
                           $db = mysqli_connect($servidor,$username,$password,$database);
