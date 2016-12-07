@@ -74,7 +74,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
 
       <div class="container">
         <div id="element">
-          <a href="../index.php">
+          <a href="index.php">
             <img src="static/custom/logo.png" class="logo" alt=""  width="250" height="60" align="middle" style="margin: 0px 10px 0px -15px"/>
           </a>
         </div>
@@ -133,7 +133,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
         <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
           <li>
             <li class="start "> <a href="/perfil/{{user.pk}}"> <i class="fa fa-user" style="color: white"></i><span class="title">&nbsp;&nbsp;Meu Perfil</span></a>
-            <a href="../pimpao_si/logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
+            <a href="logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
           </li>
        </ul>
       </li>
@@ -170,9 +170,9 @@ if ($_SESSION['userAuthenticated']===NULL) {
       <br>
       <ul>
 <!-- COMEÇO DE Menu Lateral -->
-        <li class="start "> <a href="../pimpao_si/listar_produtos.php"> <i class="fa fa-dropbox" style="color: white"></i><span class="title">Produtos em estoque</span> </a>
+        <li class="start "> <a href="listar_produtos.php"> <i class="fa fa-dropbox" style="color: white"></i><span class="title">Produtos em estoque</span> </a>
 
-        <li class="start "> <a href="../pimpao_si/listar_vendas_dia.php"> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do dia</span> </a>
+        <li class="start "> <a href="listar_vendas_dia.php"> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do dia</span> </a>
 
         <li class="start "> <a> <i class="fa fa-shopping-cart" style="color: white"></i><span class="title">Vendas do mês</span> </a>
           <ul class="sub-menu">
@@ -197,7 +197,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
            </ul>
 
         </li>
-        <li class="start "> <a href="../pimpao_si/listar_vendedoras.php"> <i class="fa fa-users" style="color: white"></i><span class="title">Vendedoras</span> </a>
+        <li class="start "> <a href="listar_vendedoras.php"> <i class="fa fa-users" style="color: white"></i><span class="title">Vendedoras</span> </a>
 <!-- {# FIM DE Menu Lateral#} -->
       </ul>
       <!-- END SIDEBAR MENU -->

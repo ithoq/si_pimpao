@@ -131,7 +131,7 @@ if ($_SESSION['userAuthenticated']===NULL) {
         <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
           <li>
             <li class="start ">
-            <a href="../si_pimpao/pimpao_si/logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
+            <a href="logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a>
           </li>
        </ul>
       </li>

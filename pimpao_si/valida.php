@@ -20,7 +20,7 @@
    if (validaUsuario($login, $senha) == true) {
 	 // O usuário e a senha digitados foram validados, manda pra página interna
 
-		header("Location:../index.php");
+		header("Location:index.php");
 		}
 
    else {
