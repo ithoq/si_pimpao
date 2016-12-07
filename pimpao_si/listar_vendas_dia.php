@@ -178,9 +178,9 @@ if ($_SESSION['userAuthenticated']===NULL) {
           <ul class="sub-menu">
               <?php
               $servidor="localhost";
-              $username="t2g05@localhost";
+              $username="t2g05";
               $password="t2g05@10";
-              $database="si_pimpao";
+              $database="t2g05";
 
               $db = mysqli_connect($servidor,$username,$password,$database);
               if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
@@ -290,9 +290,9 @@ if ($_SESSION['userAuthenticated']===NULL) {
                     // include "classes.php";
 
                     $servidor="localhost";
-                    $username="t2g05@localhost";
+                    $username="t2g05";
                     $password="t2g05@10";
-                    $database="si_pimpao";
+                    $database="t2g05";
 
                     $db = mysqli_connect($servidor,$username,$password,$database);
                     if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
@@ -325,9 +325,9 @@ if ($_SESSION['userAuthenticated']===NULL) {
                     // include "classes.php";
 
                     $servidor="localhost";
-                    $username="t2g05@localhost";
+                    $username="t2g05";
                     $password="t2g05@10";
-                    $database="si_pimpao";
+                    $database="t2g05";
 
                     $db = mysqli_connect($servidor,$username,$password,$database);
                     if (mysqli_connect_errno()) { echo "Erro de conexão!"; exit;}
